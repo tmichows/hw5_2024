@@ -1,0 +1,103 @@
+/* Step 1 */
+@keyframes logo_animation {
+    from {
+      width: 25px;
+      opacity: 0;
+    }
+  
+    to {
+      width: 475px;
+      opacity: 1;
+    }
+  
+  }
+  
+  #logo {
+    animation: logo_animation 5s;
+    animation-iteration-count: 1;
+  }
+/* Step 2 */
+body {
+    font-family: "Poppins", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+  }
+  
+
+/* Step 3 */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+/* Step 4 */
+.nav_links {
+    display: flex;
+    flex-direction: column;
+  }
+/* Step 5 */
+
+a:visited {
+    color: blue;
+  }
+
+/* Step 6 */
+.card > header {
+    background-color: #288080;
+    border: solid 2px #45ADAD;
+    padding: 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+  }
+
+.card {
+    border-radius: 50px 50px 0px 0px;
+}
+
+/* Step 7 */
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+  }
+
+/* Step 8 */
+  .pricing {
+    align-items: center;
+    justify-content: center;
+  }
+  
+/* Step 9 */
+.gallery img {
+    border: solid 10px #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+/* Step 10 */
+  
+  /* @media screen and (min-width: 900px) {
+  
+    header{
+      align-items: flex-start;
+    }
+  
+    .nav_links{
+      flex-direction: row;
+      flex-grow: 1;
+    }
+  
+    .card{
+      display: flex;
+      flex-basis: 275px;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  
+  
+  } */
