@@ -142,6 +142,8 @@ a:visited {
 
   .nav_links {
     flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-evenly;
   }
 
   /* Step 18 */
