@@ -1,103 +1,167 @@
 /* Step 1 */
 @keyframes logo_animation {
-    from {
-      width: 25px;
-      opacity: 0;
-    }
-  
-    to {
-      width: 475px;
-      opacity: 1;
-    }
-  
+  from {
+    width: 25px;
+    opacity: 0;
   }
-  
-  #logo {
-    animation: logo_animation 5s;
-    animation-iteration-count: 1;
+
+  to {
+    width: 475px;
+    opacity: 1;
   }
+}
+
+#logo {
+  animation: logo_animation;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+
 /* Step 2 */
 body {
-    font-family: "Poppins", serif;
-    background-image: url("../images/concrete_seamless.png");
-    background-color: #f1f1f1;
-  }
-  
+  font-family: "Poppins", serif;
+  background-image: url("../images/concrete_seamless.png");
+  background-color: #f1f1f1;
+}
+
 
 /* Step 3 */
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Step 4 */
 .nav_links {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+}
+
 /* Step 5 */
 
 a:visited {
-    color: blue;
-  }
+  color: blue;
+}
 
 /* Step 6 */
-.card > header {
-    background-color: #288080;
-    border: solid 2px #45ADAD;
-    padding: 20px 0px;
-    border-radius: 50px 50px 0px 0px;
-  }
+.card>header {
+  background-color: #288080;
+  border: solid 2px #45ADAD;
+  padding: 20px 0px;
+  border-radius: 50px 50px 0px 0px;
+}
 
 .card {
-    border-radius: 50px 50px 0px 0px;
+  border-radius: 50px 50px 0px 0px;
 }
 
 /* Step 7 */
-  .card {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 450px;
-  }
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 450px;
+}
 
 /* Step 8 */
-  .pricing {
-    align-items: center;
-    justify-content: center;
-  }
-  
+.pricing {
+  align-items: center;
+  justify-content: center;
+}
+
 /* Step 9 */
 .gallery img {
-    border: solid 10px #50C7C7;
-    margin: 10px;
-    width: 300px;
-  }
-  .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  border: solid 10px #50C7C7;
+  margin: 10px;
+  width: 300px;
+}
+
 /* Step 10 */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+
+  /* Step 11 */
+  header {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .nav_links {
+    flex-flow: row wrap;
+  }
+
+  /* Step 12 */
+
+  .pricing {
+    display: flex;
+  }
+
+  .card {
+    flex-basis: 275px;
+  }
+
+  /* Step 13 */
+
+  body > header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+/* Step 14
+  The Logo PNG will NOT animate.
+*/
+
+@media (prefers-reduced-motion) {
+  #logo{
+    animation-iteration-count: 0;
+  }
+}
+
+/* Step 15 */
+
+@media print and (orientation: portrait)
+{
+  /* Step 15 and 16*/
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: none;
+  }
+
+  /* Step 17 */
+
+  .nav_links{
+    flex-direction: row;
+    justify-content: space-around 
+  }
+
+  /* Step 18 */
+
+  .pricing{
+    justify-content: end;
+  }
+
+  /* Step 19 */
+  .card{
+    border: solid 2px #45ADDD;
+  }
+  /* Step 20 */
+  #gallery, .gallery{
+    display: none;
+  }
   
-  /* @media screen and (min-width: 900px) {
-  
-    header{
-      align-items: flex-start;
-    }
-  
-    .nav_links{
-      flex-direction: row;
-      flex-grow: 1;
-    }
-  
-    .card{
-      display: flex;
-      flex-basis: 275px;
-      flex-direction: column;
-      flex-wrap: wrap;
-    }
-  
-  
-  } */
+  /* Step 21 */
+  ul li:nth-child(2)::after {
+    content: "👍";
+  }
+
+}
