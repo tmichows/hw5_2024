@@ -144,10 +144,6 @@ a:visited {
     flex-direction: row;
   }
 
-  nav ul{
-    justify-content: space-between;
-  }
-
   /* Step 18 */
 
   .pricing {
