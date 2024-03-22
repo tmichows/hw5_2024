@@ -142,7 +142,10 @@ a:visited {
 
   .nav_links {
     flex-direction: row;
-    justify-content: space-evenly;
+  }
+
+  nav ul{
+    justify-content: space-between;
   }
 
   /* Step 18 */
