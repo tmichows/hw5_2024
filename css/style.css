@@ -140,10 +140,10 @@ a:visited {
 
   /* Step 17 */
 
-  .nav_links {
+  .nav_links{
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-evenly;
+    justify-content: space-evenly;
   }
 
   /* Step 18 */
