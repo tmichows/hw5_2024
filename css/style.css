@@ -191,7 +191,7 @@ Stylizes the gallery class to use flex, be in a row, wrap, and center the conten
   /* Changes the direction from column to row and justification from center to space-around*/
   .nav_links {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   /* Step 18 
