@@ -3,7 +3,7 @@ link to deployed page: https://tmichows.github.io/hw5_2024/flex
 */
 
 /* Step 1 
-Animates the logo so every time the page loads it will play for five seconds and grow from 25px to 475 pixels.
+Animates the logo so it will grow from 25px to 475 pixels.
 */
 @keyframes logo_animation {
   from {
@@ -16,7 +16,7 @@ Animates the logo so every time the page loads it will play for five seconds and
     opacity: 1;
   }
 }
-
+/* Animates the logo once per page load and sets it to last for five seconds.
 #logo {
   animation: logo_animation;
   animation-duration: 5s;
@@ -59,7 +59,10 @@ a:visited {
   color: blue;
 }
 
-/* Step 6 */
+/* Step 6 
+Stylizes the card headers to have the top corners be rounded, to a specific background color,
+border, and padding.
+*/
 .card>header {
   background-color: #288080;
   border: solid 2px #45ADAD;
@@ -67,17 +70,26 @@ a:visited {
   border-radius: 50px 50px 0px 0px;
 }
 
+/* 
+Stylizes the whole card so its top corners match the header.
+*/
 .card {
   border-radius: 50px 50px 0px 0px;
 }
 
-/* Step 7 */
+/* Step 7
+Sets the default size of each card to be 450px and sets the width at 75% to make the example
+Step 7 will only look right if Step 8 is right and vice versa.
+*/
 .card {
   flex-basis: 450px;
   width: 75%;
 }
 
-/* Step 8 */
+/* Step 8 
+Stylizes the pricing class to use flex, use a column, and align everything to the center.
+Step 8 will only look right if Step 7 is right and vice versa.
+*/
 .pricing {
   display: flex;
   flex-direction: column;
@@ -85,14 +97,19 @@ a:visited {
   justify-content: center;
 }
 
-/* Step 9 */
+/* Step 9
+Stylizes the images of the gallery so they will have a specific border, margin, and width.
+
+*/
 .gallery img {
   border: solid 10px #50C7C7;
   margin: 10px;
   width: 300px;
 }
 
-/* Step 10 */
+/* Step 10 
+Stylizes the gallery class to use flex, be in a row, wrap, and center the content.
+*/
 .gallery {
   display: flex;
   flex-direction: row;
@@ -100,30 +117,37 @@ a:visited {
   justify-content: center;
 }
 
+
+/* This is the desktop view. */
 @media screen and (min-width: 900px) {
 
-  /* Step 11 */
+  /* Step 11 
+  Stylizes the headers for desktop view, switching from column to row.
+  
+  */
   header {
     flex-flow: row wrap;
     justify-content: space-between;
   }
-
+  /* Stylizes nav_links class for desktop view, switching from column to row. */
   .nav_links {
     flex-flow: row wrap;
   }
 
-  /* Step 12 */
-
+  /* Step 12
+  Stylizes the pricing class to use the direction of row instead of column for desktop
+  */
   .pricing {
     flex-direction: row;
   }
-
+  /* Stylizes the card class to have the starting size of 275px for desktop */
   .card {
     flex-basis: 275px;
   }
 
-  /* Step 13 */
-
+  /* Step 13 
+  Stylizes the first header and the navigation bar to follow the user's scroll on desktop view
+  */
   body>header {
     position: sticky;
     top: 0;
@@ -135,56 +159,69 @@ a:visited {
 }
 
 /* Step 14
-  The Logo PNG will NOT animate when loading the page.
+  The Logo PNG will NOT animate when loading the page if the user prefers reduced motion
 */
-
 @media (prefers-reduced-motion) {
   #logo {
     animation-iteration-count: 0;
   }
 }
 
-/* Step 15 */
+/* This is the print view */
 
 @media print {
-
-  /* Step 15 and 16*/
+  /* Step 15 and 16
+  Swtiches the font family to Arial by default and turns off the background-image to use
+  the background color set in line 34 (#f1f1f1)
+  
+  */
   body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: none;
   }
 
-  /* Step 17 */
+  /* Step 17 
+  Changes nav to 100% width so the flex container expands as much 
+  space as possible rather than just the area below the logo.
+  */
 
   nav{
     width: 100%;
   }
-
+  /* Changes the direction from column to row and justification from center to space-around*/
   .nav_links {
     flex-direction: row;
     justify-content: space-around;
   }
 
-  /* Step 18 */
+  /* Step 18 
+  Stylizes the items to be a row and be aligned at the end (bottom) of the flex container.
+  */
 
   .pricing {
     flex-direction: row;
     align-items: flex-end;
   }
 
-  /* Step 19 */
+  /* Step 19 
+  Stylizes the card class to have a border and sets the size to 325px for print view
+  */
   .card {
     border: solid 2px #45ADDD;
     flex-basis: 325px;
   }
 
-  /* Step 20 */
+  /* Step 20 
+  Stylizes the gallery ID and class to never appear in print view
+  */
   #gallery,
   .gallery {
     display: none;
   }
 
-  /* Step 21 */
+  /* Step 21 
+  Add stylizing to the first line of text of the class to end in a thumbs up emoji for print view
+  */
   .card ul li:nth-child(2)::after {
     content: "👍";
   }
