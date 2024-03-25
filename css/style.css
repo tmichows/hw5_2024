@@ -1,7 +1,7 @@
+/* Steps 1 through 10 are for the default (mobile) view of the website. */
+
 /* Step 1 
-
-Animates the logo so every time the page loads it will play a 5 secon
-
+Animates the logo so every time the page loads it will play for five seconds and grow from 25px to 475 pixels.
 */
 @keyframes logo_animation {
   from {
@@ -21,28 +21,37 @@ Animates the logo so every time the page loads it will play a 5 secon
   animation-iteration-count: 1;
 }
 
-/* Step 2 */
+/* Step 2 
+Sets the font for the body, in this case a Google Fonts "Poppins" with a backup of a serif font.
+Sets up a background image and a background color (in case the background-image fails).
+
+*/
 body {
   font-family: "Poppins", serif;
   background-image: url("../images/concrete_seamless.png");
   background-color: #f1f1f1;
 }
 
-
-/* Step 3 */
+/* Step 3 
+Sets up the flexbox for the header (specifically the first header) 
+*/
 header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Step 4 */
+/* Step 4
+Sets up the flexbox for the navigation bar.
+*/
 .nav_links {
   display: flex;
   flex-direction: column;
 }
 
-/* Step 5 */
+/* Step 5 
+Visited links no longer change color and now remain the default color of blue.
+*/
 
 a:visited {
   color: blue;
@@ -124,7 +133,7 @@ a:visited {
 }
 
 /* Step 14
-  The Logo PNG will NOT animate.
+  The Logo PNG will NOT animate when loading the page.
 */
 
 @media (prefers-reduced-motion) {
@@ -148,7 +157,7 @@ a:visited {
   nav{
     width: 100%;
   }
-  
+
   .nav_links {
     flex-direction: row;
     justify-content: space-around;
